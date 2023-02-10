@@ -687,7 +687,7 @@
 
 				</div>
 			</div>
-			<form class="form-area " id="myForm" action="mail.php" method="post" class="contact-form text-right">
+			<!-- <form class="form-area " id="myForm" action="mail.php" method="post" class="contact-form text-right">
 				<div class="row">
 					<div class="col-lg-6 form-group">
 						<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''"
@@ -712,61 +712,62 @@
 						</div>
 					</div>
 				</div>
+			</form> -->
+
+			<form class="form-area" id="myForm" action="mail.php" method="post" role="form"
+				class="contact-form text-right">
+				<div class="row">
+					<div class="col-lg-6 form-group">
+						<input type="text" name="name" class="common-input mb-20 form-control" id="name"
+							placeholder="Enter your name" onfocus="this.placeholder = ''"
+							onblur="this.placeholder = 'Enter your name'" required="">
+
+						<input type="email" class="common-input mb-20 form-control" name="email" id="email"
+							placeholder="Enter email address"
+							pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''"
+							onblur="this.placeholder = 'Enter email address'" required="">
+
+						<input type="telp" class="common-input mb-20 form-control" name="telp" id="telp"
+							placeholder="Enter your number phone" onfocus="this.placeholder = ''"
+							onblur="this.placeholder = 'Enter your number phone'" required="">
+
+						<select id="category" class="common-input mb-20 form-control">
+							<option>-- Pilih Kategori --</option>
+							<option value="Merapi Village">Merapi Village</option>
+							<option value="Omah Kita">Omah Kita</option>
+							<option value="Garden Hill Village">Garden Hill Village</option>
+							<option value="D'highland">D'highland</option>
+							<option value="Rumah Kayu">Rumah Kayu Bertingkat</option>
+							<option value="Other">Yang Lain</option>
+						</select>
+					</div>
+					<div class="col-lg-6 form-group">
+						<textarea id="contentMessage" class="common-textarea mt-10 form-control" name="message"
+							rows="10" placeholder="Message" onfocus="this.placeholder = ''"
+							onblur="this.placeholder = 'Messege'" required=""></textarea>
+						<button onclick="submitMessage();" type="button" class="primary-btn mt-20" required="">Send
+							Message<span class="lnr lnr-arrow-right"></span></button>
+						<div class="alert-msg">
+						</div>
+					</div>
+					<script>
+						function submitMessage() {
+							nama_ = document.getElementById("name");
+							email_ = document.getElementById("email");
+							telp_ = document.getElementById("telp");
+							category_ = document.getElementById("category");
+							text_ = document.getElementById("contentMessage");
+							message_ = "Nama : " + nama_.value;
+							message_ += "%0AEmail : " + email_.value;
+							message_ += "%0ANo. : " + telp_.value;
+							message_ += "%0ACategory : " + category_.value;
+							message_ += "%0A%0A" + text_.value;
+							window.location.href = 'https://wa.me/6283145902779?text=' + message_;
+						}
+					</script>
+				</div>
 			</form>
 
-			<!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-				<div class="row">
-				  <div class="col-md-6 form-group">
-					<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-				  </div>
-				  <div class="col-md-6 form-group mt-3 mt-md-0">
-					<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-				  </div>
-				</div>
-				<div class="form-group mt-3">
-				  <input type="telp" class="form-control" name="telp" id="telp" placeholder="Your Number Phone" required>
-				</div>
-				<div class="form-group mt-3">
-				  <select id="category" class="form-control">
-					<option>-- Pilih Kategori --</option>
-					<option value="Tugas">Tugas Sekolah/Kuliah</option>
-					<option value="Laporan PKL">Laporan PKL</option>
-					<option value="Skripsi/TA">Skripsi/TA</option>
-					<option value="Ujian">Ujian Sekolah/UTS/UAS</option>
-					<option value="Other">Yang Lain</option>
-				  </select>
-				</div>
-				<div class="form-group mt-3">
-				  <textarea id="contentMessage" class="form-control" name="message" rows="5" placeholder="Message"
-					required></textarea>
-				</div>
-				<div class="my-3">
-				  <div class="loading">Loading</div>
-				  <div class="error-message"></div>
-				  <div class="sent-message">Your message has been sent. Thank you!</div>
-				</div>
-				<div class="text-end"><button onclick="submitMessage();" type="button" class="btn"
-					style="background-color: #5fcf80; color: white; border-radius: 50px;">Send
-					Message</button></div>
-				<script>
-				  function submitMessage() {
-					nama_ = document.getElementById("name");
-					email_ = document.getElementById("email");
-					telp_ = document.getElementById("telp");
-					category_ = document.getElementById("category");
-					text_ = document.getElementById("contentMessage");
-					message_ = "Nama : " + nama_.value;
-					message_ += "%0AEmail : " + email_.value;
-					message_ += "%0ANo. : " + telp_.value;
-					message_ += "%0ACategory : " + category_.value;
-					message_ += "%0A%0A" + text_.value;
-					window.location.href = 'https://wa.me/6283145902779?text=' + message_;
-				  }
-				</script>
-			  </form> -->
-
-
-		</div>
 	</section>
 	<!-- end contact Area -->
 
