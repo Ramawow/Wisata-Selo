@@ -657,7 +657,7 @@
 
 				</div>
 			</div>
-			<form class="form-area " id="myForm" action="mail.php" method="post" class="contact-form text-right">
+			<!-- <form class="form-area " id="myForm" action="mail.php" method="post" class="contact-form text-right">
 				<div class="row">
 					<div class="col-lg-6 form-group">
 						<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''"
@@ -681,6 +681,59 @@
 						<div class="alert-msg">
 						</div>
 					</div>
+				</div>
+			</form> -->
+			<form class="form-area" id="myForm" action="mail.php" method="post" role="form"
+				class="contact-form text-right">
+				<div class="row">
+					<div class="col-lg-6 form-group">
+						<input type="text" name="name" class="common-input mb-20 form-control" id="name"
+							placeholder="Enter your name" onfocus="this.placeholder = ''"
+							onblur="this.placeholder = 'Enter your name'" required="">
+
+						<input type="email" class="common-input mb-20 form-control" name="email" id="email"
+							placeholder="Enter email address"
+							pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''"
+							onblur="this.placeholder = 'Enter email address'" required="">
+
+						<input type="telp" class="common-input mb-20 form-control" name="telp" id="telp"
+							placeholder="Enter your number phone" onfocus="this.placeholder = ''"
+							onblur="this.placeholder = 'Enter your number phone'" required="">
+
+						<select id="category" class="common-input mb-20 form-control">
+							<option>-- Pilih Kategori --</option>
+							<option value="Merapi Village">Merapi Village</option>
+							<option value="Omah Kita">Omah Kita</option>
+							<option value="Garden Hill Village">Garden Hill Village</option>
+							<option value="D'highland">D'highland</option>
+							<option value="Rumah Kayu">Rumah Kayu Bertingkat</option>
+							<option value="Other">Yang Lain</option>
+						</select>
+					</div>
+					<div class="col-lg-6 form-group">
+						<textarea id="contentMessage" class="common-textarea mt-10 form-control" name="message"
+							rows="10" placeholder="Message" onfocus="this.placeholder = ''"
+							onblur="this.placeholder = 'Messege'" required=""></textarea>
+						<button onclick="submitMessage();" type="button" class="primary-btn mt-20" required="">Send
+							Message<span class="lnr lnr-arrow-right"></span></button>
+						<div class="alert-msg">
+						</div>
+					</div>
+					<script>
+						function submitMessage() {
+							nama_ = document.getElementById("name");
+							email_ = document.getElementById("email");
+							telp_ = document.getElementById("telp");
+							category_ = document.getElementById("category");
+							text_ = document.getElementById("contentMessage");
+							message_ = "Nama : " + nama_.value;
+							message_ += "%0AEmail : " + email_.value;
+							message_ += "%0ANo. : " + telp_.value;
+							message_ += "%0ACategory : " + category_.value;
+							message_ += "%0A%0APesan :" + text_.value;
+							window.location.href = 'https://wa.me/6283145902779?text=' + message_;
+						}
+					</script>
 				</div>
 			</form>
 
