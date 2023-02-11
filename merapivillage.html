@@ -30,7 +30,12 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<!-- return false Tidak bisa klik kanan, ctrl A & C -->
+
+<body oncontextmenu="return false" onselectstart="return false"
+	onkeydown="if ((arguments[0] || window.event).ctrlKey) return false">
+	<!-- End -->
+
 	<!-- start banner Area -->
 	<section class="banner-area" id="home">
 		<!-- Start Header Area -->
@@ -761,7 +766,7 @@
 							message_ += "%0ANo. : " + telp_.value;
 							message_ += "%0ACategory : " + category_.value;
 							message_ += "%0A%0APesan :" + text_.value;
-							window.location.href = 'https://wa.me/6283145902779?text=' + message_;
+							window.location.href = 'https://wa.me/6285802697715?text=' + message_;
 						}
 					</script>
 				</div>
@@ -832,7 +837,7 @@
 							<a href="#"><i class="fa fa-facebook"></i></a>
 							<a href="#"><i class="fa fa-twitter"></i></a>
 							<a href="https://www.instagram.com/merapivillage/"><i class="fa fa-instagram"></i></a>
-							<a href="wa.me/6285802697715"><i class="fa fa-whatsapp"></i></a>
+							<a href="https://wa.me/6285802697715"><i class="fa fa-whatsapp"></i></a>
 						</div>
 					</div>
 				</div>

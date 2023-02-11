@@ -30,7 +30,12 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<!-- return false Tidak bisa klik kanan, ctrl A & C -->
+
+<body oncontextmenu="return false" onselectstart="return false"
+	onkeydown="if ((arguments[0] || window.event).ctrlKey) return false">
+	<!-- End -->
+
 	<!-- start banner Area -->
 	<section class="banner-area" id="home">
 		<!-- Start Header Area -->
@@ -470,6 +475,99 @@
 					</div>
 				</div>
 			</div>
+			<section class="project-area section-gap" style="margin-top: -50px;">
+				<div class="container">
+					<div class="row justify-content-center d-flex">
+						<div class="active-works-carousel mt-40 col-lg-8">
+							<div class="item">
+								<img class="img-fluid" src="img/KTmwr1.png" alt="" style=" width:720px; height: 500px;">
+								<div class="caption text-center mt-20">
+									<h6 class="text-uppercase">Kamar Tidur Omah Kita Mawar</h6>
+
+								</div>
+							</div>
+							<div class="item">
+								<img class="img-fluid" src="img/RTmwr.png" alt="" style=" width:720px; height: 500px;">
+								<div class="caption text-center mt-20">
+									<h6 class="text-uppercase">Ruang Tamu Omah Kita Mawar</h6>
+
+								</div>
+							</div>
+							<div class="item">
+								<img class="img-fluid" src="img/RTmwr1.png" alt="" style=" width:720px; height: 500px;">
+								<div class="caption text-center mt-20">
+									<h6 class="text-uppercase">Ruang Tamu Omah Kita Mawar</h6>
+
+								</div>
+							</div>
+							<div class="item">
+								<img class="img-fluid" src="img/Dprmwr.png" alt="" style=" width:720px; height: 500px;">
+								<div class="caption text-center mt-20">
+									<h6 class="text-uppercase">Dapur Omah Kita Mawar</h6>
+
+								</div>
+							</div>
+							<div class="item">
+								<img class="img-fluid" src="img/KTtlp.png" alt="" style=" width:720px; height: 500px;">
+								<div class="caption text-center mt-20">
+									<h6 class="text-uppercase">Kamar Tidur Omah Kita Tulip</h6>
+
+								</div>
+							</div>
+							<div class="item">
+								<img class="img-fluid" src="img/RTtlp.png" alt="" style=" width:720px; height: 500px;">
+								<div class="caption text-center mt-20">
+									<h6 class="text-uppercase">Ruang Tamu Omah Kita Tulip</h6>
+
+								</div>
+							</div>
+							<div class="item">
+								<img class="img-fluid" src="img/RTtlp1.png" alt="" style=" width:720px; height: 500px;">
+								<div class="caption text-center mt-20">
+									<h6 class="text-uppercase">Jemuran Omah Kita Tulip</h6>
+
+								</div>
+							</div>
+							<div class="item">
+								<img class="img-fluid" src="img/KTbgv.png" alt="" style=" width:720px; height: 500px;">
+								<div class="caption text-center mt-20">
+									<h6 class="text-uppercase">Kamar Tidur Omah Kita Bougenville</h6>
+
+								</div>
+							</div>
+							<div class="item">
+								<img class="img-fluid" src="img/RTbgv.png" alt="" style=" width:720px; height: 500px;">
+								<div class="caption text-center mt-20">
+									<h6 class="text-uppercase">Ruang Tamu Omah Kita Bougenville</h6>
+
+								</div>
+							</div>
+							<div class="item">
+								<img class="img-fluid" src="img/KTagr.png" alt="" style=" width:720px; height: 500px;">
+								<div class="caption text-center mt-20">
+									<h6 class="text-uppercase">Kamar Tidur Omah Kita Anggrek</h6>
+
+								</div>
+							</div>
+							<div class="item">
+								<img class="img-fluid" src="img/RTagr.png" alt="" style=" width:720px; height: 500px;">
+								<div class="caption text-center mt-20">
+									<h6 class="text-uppercase">Ruang Tamu Omah Kita Anggrek</h6>
+
+								</div>
+							</div>
+							<div class="item">
+								<img class="img-fluid" src="img/lmragr.png" alt="" style=" width:720px; height: 500px;">
+								<div class="caption text-center mt-20">
+									<h6 class="text-uppercase">Lemari Omah Kita Anggrek</h6>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
 			<div class="row d-flex align-items-center">
 				<!-- <div class="counter-left col-lg-3 col-md-3">
 					<div class="single-facts">
@@ -498,6 +596,7 @@
 							Amenities, Tea & Coffe set, Free breakfast 4 pack
 						</p>
 					</div>
+
 					<div class="single-faq">
 						<h2 class="text-uppercase">
 							Omah Kita Tulip
